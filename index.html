@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquafree Tabs - Higiene Bucal sin Agua</title>
+    <meta name="description" content="Pasta dental en pastilla. Limpia tus dientes en cualquier lugar sin necesidad de agua. Práctico, portátil y sustentable.">
+    
+    <meta property="og:title" content="Aquafree Tabs - Pasta Dental en Pastilla">
+    <meta property="og:description" content="La solución perfecta para viajeros y estudiantes. Higiene bucal sin agua.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+
+    <style>
+        :root {
+            --azul-cielo: #87CEEB;
+            --blanco: #FFFFFF;
+            --texto-oscuro: #2C3E50;
+            --gris-claro: #F8FAFC;
+            --whatsapp-green: #25D366;
+            --sombra: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--blanco);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-cielo) 0%, #b3e5fc 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+            color: var(--texto-oscuro);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Botones de WhatsApp */
+        .cta-whatsapp {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-whatsapp:hover {
+            transform: translateY(-3px);
+            background-color: #1ebe57;
+        }
+
+        /* Sección Problema */
+        .problema {
+            background-color: var(--gris-claro);
+            text-align: center;
+        }
+
+        .problema h2 {
+            margin-bottom: 20px;
+            color: #d32f2f;
+        }
+
+        /* Beneficios Grid */
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--sombra);
+            text-align: center;
+            border-top: 5px solid var(--azul-cielo);
+        }
+
+        .card span {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Cómo funciona */
+        .pasos {
+            text-align: center;
+        }
+
+        .pasos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .paso {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .paso-numero {
+            width: 50px;
+            height: 50px;
+            background: var(--azul-cielo);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: var(--gris-claro);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            color: var(--azul-cielo);
+            margin-bottom: 10px;
+        }
+
+        /* Urgencia Section */
+        .urgencia {
+            text-align: center;
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .badge-urgencia {
+            background: #ffecb3;
+            color: #ff8f00;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #f1f1f1;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-links a {
+            color: var(--texto-oscuro);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            section { padding: 60px 20px; }
+            .cta-whatsapp { width: 90%; }
+        }
+
+        /* Animación scroll reveal sutil */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Aquafree Tabs</h1>
+            <p>La pasta dental en formato de pastilla que limpia tus dientes sin necesidad de usar agua. ¡Solo mastica y cepilla!</p>
+            <a href="https://wa.me/524491901669?text=Hola%21%20Me%20interesa%20probar%20Aquafree%20Tabs.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n." 
+               class="cta-whatsapp" target="_blank">
+                💬 Quiero probar Aquafree Tabs
+            </a>
+        </div>
+    </header>
+
+    <section class="problema reveal">
+        <h2>¿Sin agua y necesitas cepillarte? 💧</h2>
+        <p>Resolvemos la dificultad de mantener una buena higiene bucal cuando no se tiene acceso fácil al agua o a una pasta dental tradicional.</p>
+    </section>
+
+    <section class="beneficios reveal">
+        <h2 style="text-align: center; margin-bottom: 40px;">Beneficios Principales</h2>
+        <div class="beneficios-grid">
+            <div class="card">
+                <span>🚀</span>
+                <h3>Practicidad total</h3>
+                <p>No necesitas agua y es de fácil uso en cualquier lugar.</p>
+            </div>
+            <div class="card">
+                <span>✈️</span>
+                <h3>Portabilidad total</h3>
+                <p>Sin derrames, ideal para llevar en mochilas y equipaje.</p>
+            </div>
+            <div class="card">
+                <span>🎯</span>
+                <h3>Dosificación exacta</h3>
+                <p>Cada pastilla contiene la cantidad adecuada para un cepillado.</p>
+            </div>
+            <div class="card">
+                <span>🌱</span>
+                <h3>Sustentabilidad</h3>
+                <p>Reduce el uso de empaque de plástico y el consumo de agua.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://wa.me/524491901669?text=Hola%21%20Me%20interesa%20probar%20Aquafree%20Tabs.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n." 
+               class="cta-whatsapp" target="_blank">
+                📱 ¡Me interesa el cambio!
+            </a>
+        </div>
+    </section>
+
+    <section class="pasos reveal">
+        <h2>¿Cómo se usan las tabletas?</h2>
+        <div class="pasos-container">
+            <div class="paso">
+                <div class="paso-numero">1</div>
+                <p>Mastica la tableta dental.</p>
+            </div>
+            <div class="paso">
+                <div class="paso-numero">2</div>
+                <p>Cepilla normalmente como siempre.</p>
+            </div>
+            <div class="paso">
+                <div class="paso-numero">3</div>
+                <p>¡Listo! Dientes limpios sin usar agua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq reveal">
+        <h2 style="text-align: center; margin-bottom: 30px;">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h4>¿Cuánto dura un frasco?</h4>
+            <p>Nuestros empaques están diseñados para cubrir tus necesidades de higiene diaria por un mes completo.</p>
+        </div>
+        <div class="faq-item">
+            <h4>¿Es seguro para viajar?</h4>
+            <p>¡Sí! Al ser pastillas sólidas, evitas derrames y problemas con seguridad en los aeropuertos.</p>
+        </div>
+    </section>
+
+    <section class="urgencia reveal">
+        <div class="badge-urgencia">⚡ Oferta de Lanzamiento</div>
+        <h2>¡No te quedes fuera!</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 25px;">Los primeros 30 registros recibirán un <strong>10% de descuento</strong> en su primera compra.</p>
+        <a href="https://wa.me/524491901669?text=Hola%21%20Me%20interesa%20Aquafree%20Tabs.%20Quiero%20ser%20de%20los%20primeros%2030%20y%20obtener%20mi%2010%25%20de%20descuento." 
+           class="cta-whatsapp" style="max-width: 500px; font-size: 1.4rem;" target="_blank">
+            💬 Quiero mi descuento ahora
+        </a>
+    </section>
+
+    <footer>
+        <p><strong>Aquafree Tabs</strong></p>
+        <div class="footer-links">
+            <a href="mailto:aquafreetabs@gmail.com">✉️ aquafreetabs@gmail.com</a>
+            <a href="#">📸 Instagram</a>
+            <a href="#">👤 Facebook</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.7rem; color: #999;">© 2026 Aquafree Tabs. Proyecto de validación odontológica.</p>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
